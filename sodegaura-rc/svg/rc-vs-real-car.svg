@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- グラデーション定義 -->
+        <linearGradient id="redGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#ff0000" stop-opacity="0.7" />
+            <stop offset="100%" stop-color="#ff3333" stop-opacity="0.3" />
+        </linearGradient>
+        
+        <linearGradient id="metalFinish" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fff" stop-opacity="0.9" />
+            <stop offset="50%" stop-color="#ccc" stop-opacity="0.6" />
+            <stop offset="100%" stop-color="#888" stop-opacity="0.8" />
+        </linearGradient>
+        
+        <!-- フィルター定義 -->
+        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="5" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        
+        <filter id="shadow" x="-10%" y="-10%" width="120%" height="150%">
+            <feGaussianBlur stdDeviation="3" result="shadow" />
+            <feOffset dx="2" dy="5" result="offsetBlur"/>
+            <feComposite in="SourceGraphic" in2="offsetBlur" operator="over" />
+        </filter>
+    </defs>
+    
+    <!-- 背景 -->
+    <rect width="600" height="400" fill="#111" />
+    
+    <!-- グリッド背景 -->
+    <g opacity="0.05">
+        <!-- 横線 -->
+        <line x1="0" y1="50" x2="600" y2="50" stroke="#fff" stroke-width="0.5" />
+        <line x1="0" y1="100" x2="600" y2="100" stroke="#fff" stroke-width="0.5" />
+        <line x1="0" y1="150" x2="600" y2="150" stroke="#fff" stroke-width="0.5" />
+        <line x1="0" y1="200" x2="600" y2="200" stroke="#fff" stroke-width="0.5" />
+        <line x1="0" y1="250" x2="600" y2="250" stroke="#fff" stroke-width="0.5" />
+        <line x1="0" y1="300" x2="600" y2="300" stroke="#fff" stroke-width="0.5" />
+        <line x1="0" y1="350" x2="600" y2="350" stroke="#fff" stroke-width="0.5" />
+        
+        <!-- 縦線 -->
+        <line x1="50" y1="0" x2="50" y2="400" stroke="#fff" stroke-width="0.5" />
+        <line x1="100" y1="0" x2="100" y2="400" stroke="#fff" stroke-width="0.5" />
+        <line x1="150" y1="0" x2="150" y2="400" stroke="#fff" stroke-width="0.5" />
+        <line x1="200" y1="0" x2="200" y2="400" stroke="#fff" stroke-width="0.5" />
+        <line x1="250" y1="0" x2="250" y2="400" stroke="#fff" stroke-width="0.5" />
+        <line x1="300" y1="0" x2="300" y2="400" stroke="#fff" stroke-width="0.5" />
+        <line x1="350" y1="0" x2="350" y2="400" stroke="#fff" stroke-width="0.5" />
+        <line x1="400" y1="0" x2="400" y2="400" stroke="#fff" stroke-width="0.5" />
+        <line x1="450" y1="0" x2="450" y2="400" stroke="#fff" stroke-width="0.5" />
+        <line x1="500" y1="0" x2="500" y2="400" stroke="#fff" stroke-width="0.5" />
+        <line x1="550" y1="0" x2="550" y2="400" stroke="#fff" stroke-width="0.5" />
+    </g>
+    
+    <!-- タイトル -->
+    <text x="300" y="40" font-family="Arial" font-size="24" fill="#fff" text-anchor="middle" font-weight="bold">実車とエンジンRCカー</text>
+    <text x="300" y="65" font-family="Arial" font-size="14" fill="#aaa" text-anchor="middle">スケール・魅力の比較</text>
+    
+    <!-- 区切り線 -->
+    <line x1="300" y1="80" x2="300" y2="320" stroke="#f22" stroke-width="2" stroke-dasharray="10,5">
+        <animate attributeName="stroke-dashoffset" from="0" to="30" dur="1.5s" repeatCount="indefinite" />
+    </line>
+    
+    <!-- 実車側 -->
+    <g transform="translate(150, 180)">
+        <!-- 実車シルエット -->
+        <path d="M-100,20 C-90,0 -70,-15 -40,-20 C-10,-25 20,-25 50,-20 C80,-15 100,-5 110,10 C115,20 120,30 120,40 C120,50 110,55 100,60 L-80,60 C-90,55 -100,50 -105,40 C-110,30 -105,25 -100,20 Z" fill="none" stroke="#fff" stroke-width="2" />
+        
+        <!-- 実車詳細 - ウィンドウ -->
+        <path d="M-40,-18 C-10,-22 20,-22 50,-18 C70,-15 80,-5 85,10 C70,20 40,25 0,25 C-40,25 -70,20 -85,10 C-80,-5 -60,-15 -40,-18 Z" fill="none" stroke="#fff" stroke-width="1" opacity="0.5" />
+        
+        <!-- 実車詳細 - ヘッドライト -->
+        <path d="M-95,17 C-93,13 -90,10 -85,10 C-80,10 -78,13 -80,17 C-82,21 -85,24 -90,24 C-95,24 -97,21 -95,17 Z" fill="#fff" opacity="0.6" />
+        <path d="M-95,17 C-93,13 -90,10 -85,10 C-80,10 -78,13 -80,17 C-82,21 -85,24 -90,24 C-95,24 -97,21 -95,17 Z" fill="none" stroke="#fff" stroke-width="0.5" />
+        
+        <!-- 実車詳細 - リアライト -->
+        <path d="M100,15 C102,12 105,10 108,10 C111,10 113,12 115,15 C117,18 117,22 115,25 C113,28 110,30 107,30 C104,30 102,28 100,25 C98,22 98,18 100,15 Z" fill="#f22" opacity="0.6" />
+        <path d="M100,15 C102,12 105,10 108,10 C111,10 113,12 115,15 C117,18 117,22 115,25 C113,28 110,30 107,30 C104,30 102,28 100,25 C98,22 98,18 100,15 Z" fill="none" stroke="#f22" stroke-width="0.5" />
+        
+        <!-- 実車詳細 - タイヤ -->
+        <ellipse cx="-70" cy="60" rx="15" ry="15" fill="#333" />
+        <ellipse cx="-70" cy="60" rx="8" ry="8" fill="none" stroke="#666" stroke-width="1" />
+        
+        <ellipse cx="70" cy="60" rx="15" ry="15" fill="#333" />
+        <ellipse cx="70" cy="60" rx="8" ry="8" fill="none" stroke="#666" stroke-width="1" />
+        
+        <!-- サイズ表示 - 実車 -->
+        <line x1="-105" y1="80" x2="120" y2="80" stroke="#fff" stroke-width="1" />
+        <line x1="-105" y1="75" x2="-105" y2="85" stroke="#fff" stroke-width="1" />
+        <line x1="120" y1="75" x2="120" y2="85" stroke="#fff" stroke-width="1" />
+        <text x="7.5" y="95" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle">約4.5m</text>
+    </g>
+    
+    <!-- RCカー側 -->
+    <g transform="translate(450, 180)">
+        <!-- RCカーシルエット -->
+        <path d="M-40,8 C-36,0 -28,-6 -16,-8 C-4,-10 8,-10 20,-8 C32,-6 40,-2 44,4 C46,8 48,12 48,16 C48,20 44,22 40,24 L-32,24 C-36,22 -40,20 -42,16 C-44,12 -42,10 -40,8 Z" fill="none" stroke="#fff" stroke-width="2" />
+        
+        <!-- RCカー詳細 - エンジン -->
+        <rect x="-5" y="0" width="10" height="15" fill="#444" stroke="#888" stroke-width="0.5" />
+        <circle cx="0" cy="5" r="3" fill="#888" />
+        <path d="M2,5 L8,3 L10,8 L6,12 L2,5" fill="#555" stroke="#888" stroke-width="0.5" />
+        
+        <!-- RCカー詳細 - アンテナ -->
+        <line x1="20" y1="-8" x2="25" y2="-30" stroke="#fff" stroke-width="0.5" />
+        <circle cx="25" cy="-32" r="2" fill="#f22" />
+        
+        <!-- RCカー詳細 - エアフィルター -->
+        <ellipse cx="-25" cy="0" rx="5" ry="4" fill="#555" stroke="#888" stroke-width="0.5" transform="rotate(-15)" />
+        
+        <!-- RCカー詳細 - 排気マフラー -->
+        <path d="M30,5 C35,5 38,7 40,10 C42,13 42,16 40,18" fill="none" stroke="#888" stroke-width="1.5" />
+        <ellipse cx="40" cy="18" rx="2" ry="1" fill="#333" stroke="#555" stroke-width="0.5" />
+        
+        <!-- エキゾーストエフェクト -->
+        <g>
+            <ellipse cx="43" cy="18" rx="3" ry="2" fill="#f22" opacity="0.6">
+                <animate attributeName="rx" values="1;3;1" dur="0.5s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="0.6;0.2;0.6" dur="0.5s" repeatCount="indefinite" />
+            </ellipse>
+            <ellipse cx="46" cy="18" rx="2" ry="1.5" fill="#f22" opacity="0.3">
+                <animate attributeName="rx" values="0.5;2;0.5" dur="0.5s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="0.3;0.1;0.3" dur="0.5s" repeatCount="indefinite" />
+            </ellipse>
+        </g>
+        
+        <!-- RCカー詳細 - タイヤ -->
+        <ellipse cx="-28" cy="24" rx="6" ry="6" fill="#333" />
+        <ellipse cx="-28" cy="24" rx="3" ry="3" fill="none" stroke="#666" stroke-width="0.5" />
+        
+        <ellipse cx="28" cy="24" rx="6" ry="6" fill="#333" />
+        <ellipse cx="28" cy="24" rx="3" ry="3" fill="none" stroke="#666" stroke-width="0.5" />
+        
+        <!-- サイズ表示 - RCカー -->
+        <line x1="-42" y1="40" x2="48" y2="40" stroke="#fff" stroke-width="1" />
+        <line x1="-42" y1="35" x2="-42" y2="45" stroke="#fff" stroke-width="1" />
+        <line x1="48" y1="35" x2="48" y2="45" stroke="#fff" stroke-width="1" />
+        <text x="3" y="55" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle">約45cm</text>
+    </g>
+    
+    <!-- 比較情報テキスト -->
+    <g transform="translate(150, 290)">
+        <rect width="100" height="80" fill="rgba(0,0,0,0.3)" stroke="#333" stroke-width="1" rx="5" ry="5" />
+        <text x="50" y="20" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">実車</text>
+        <text x="10" y="40" font-family="Arial" font-size="10" fill="#fff">・重量: 約1,200kg</text>
+        <text x="10" y="55" font-family="Arial" font-size="10" fill="#fff">・エンジン: 2,000cc</text>
+        <text x="10" y="70" font-family="Arial" font-size="10" fill="#fff">・価格: 数百万円</text>
+    </g>
+    
+    <g transform="translate(450, 290)">
+        <rect width="100" height="80" fill="rgba(0,0,0,0.3)" stroke="#333" stroke-width="1" rx="5" ry="5" />
+        <text x="50" y="20" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">エンジンRCカー</text>
+        <text x="10" y="40" font-family="Arial" font-size="10" fill="#fff">・重量: 約3kg</text>
+        <text x="10" y="55" font-family="Arial" font-size="10" fill="#fff">・エンジン: 3.5cc</text>
+        <text x="10" y="70" font-family="Arial" font-size="10" fill="#fff">・価格: 5〜15万円</text>
+    </g>
+    
+    <!-- 中央の比較サイズ -->
+    <g transform="translate(300, 230)">
+        <text x="0" y="-10" font-family="Arial" font-size="14" fill="#f22" text-anchor="middle" font-weight="bold">スケール比較</text>
+        <text x="0" y="10" font-family="Arial" font-size="24" fill="#fff" text-anchor="middle" font-weight="bold">1:10</text>
+        <text x="0" y="30" font-family="Arial" font-size="12" fill="#aaa" text-anchor="middle">サイズ比</text>
+    </g>
+    
+    <!-- 特徴比較表 -->
+    <g transform="translate(300, 340)">
+        <rect width="500" height="40" fill="rgba(0,0,0,0.5)" stroke="#444" stroke-width="1" rx="5" ry="5" />
+        <line x1="0" y1="0" x2="0" y2="40" stroke="#f22" stroke-width="2" />
+        
+        <text x="-200" y="15" font-family="Arial" font-size="10" fill="#fff" text-anchor="middle">本格的なドライビング体験</text>
+        <text x="-200" y="30" font-family="Arial" font-size="10" fill="#aaa" text-anchor="middle">免許・保険・高額維持費が必要</text>
+        
+        <text x="200" y="15" font-family="Arial" font-size="10" fill="#fff" text-anchor="middle">手軽な本格レーシング体験</text>
+        <text x="200" y="30" font-family="Arial" font-size="10" fill="#aaa" text-anchor="middle">免許不要・低コストで本格エンジン音を体感</text>
+    </g>
+    
+    <!-- 装飾エフェクト - 動く線 -->
+    <path d="M50,40 C100,20 150,60 200,30 C250,0 300,20 350,40 C400,60 450,30 500,50 C550,70 600,50 650,70" 
+          stroke="#f22" stroke-width="1" fill="none" opacity="0.3" stroke-dasharray="5,5">
+        <animate attributeName="d" 
+                 values="M50,40 C100,20 150,60 200,30 C250,0 300,20 350,40 C400,60 450,30 500,50 C550,70 600,50 650,70;
+                         M50,50 C100,30 150,70 200,40 C250,10 300,30 350,50 C400,70 450,40 500,60 C550,80 600,60 650,80;
+                         M50,40 C100,20 150,60 200,30 C250,0 300,20 350,40 C400,60 450,30 500,50 C550,70 600,50 650,70" 
+                 dur="10s" repeatCount="indefinite" />
+    </path>
+</svg> 

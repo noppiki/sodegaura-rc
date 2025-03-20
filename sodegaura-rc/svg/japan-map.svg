@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500" height="600" viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- 点滅効果用 -->
+        <radialGradient id="pointGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop offset="0%" stop-color="#f22" stop-opacity="1" />
+            <stop offset="100%" stop-color="#f22" stop-opacity="0.3" />
+        </radialGradient>
+        
+        <!-- グロー効果 -->
+        <filter id="mapGlow" x="-10%" y="-10%" width="120%" height="120%">
+            <feGaussianBlur stdDeviation="1.5" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+    </defs>
+    
+    <!-- 背景グリッド -->
+    <rect width="500" height="600" fill="#111" />
+    <g opacity="0.05">
+        <rect x="0" y="0" width="500" height="600" fill="none" stroke="#666" stroke-width="0.5" />
+        <!-- 横線 -->
+        <line x1="0" y1="50" x2="500" y2="50" stroke="#666" stroke-width="0.2" />
+        <line x1="0" y1="100" x2="500" y2="100" stroke="#666" stroke-width="0.2" />
+        <line x1="0" y1="150" x2="500" y2="150" stroke="#666" stroke-width="0.2" />
+        <line x1="0" y1="200" x2="500" y2="200" stroke="#666" stroke-width="0.2" />
+        <line x1="0" y1="250" x2="500" y2="250" stroke="#666" stroke-width="0.2" />
+        <line x1="0" y1="300" x2="500" y2="300" stroke="#666" stroke-width="0.2" />
+        <line x1="0" y1="350" x2="500" y2="350" stroke="#666" stroke-width="0.2" />
+        <line x1="0" y1="400" x2="500" y2="400" stroke="#666" stroke-width="0.2" />
+        <line x1="0" y1="450" x2="500" y2="450" stroke="#666" stroke-width="0.2" />
+        <line x1="0" y1="500" x2="500" y2="500" stroke="#666" stroke-width="0.2" />
+        <line x1="0" y1="550" x2="500" y2="550" stroke="#666" stroke-width="0.2" />
+        <!-- 縦線 -->
+        <line x1="50" y1="0" x2="50" y2="600" stroke="#666" stroke-width="0.2" />
+        <line x1="100" y1="0" x2="100" y2="600" stroke="#666" stroke-width="0.2" />
+        <line x1="150" y1="0" x2="150" y2="600" stroke="#666" stroke-width="0.2" />
+        <line x1="200" y1="0" x2="200" y2="600" stroke="#666" stroke-width="0.2" />
+        <line x1="250" y1="0" x2="250" y2="600" stroke="#666" stroke-width="0.2" />
+        <line x1="300" y1="0" x2="300" y2="600" stroke="#666" stroke-width="0.2" />
+        <line x1="350" y1="0" x2="350" y2="600" stroke="#666" stroke-width="0.2" />
+        <line x1="400" y1="0" x2="400" y2="600" stroke="#666" stroke-width="0.2" />
+        <line x1="450" y1="0" x2="450" y2="600" stroke="#666" stroke-width="0.2" />
+    </g>
+    
+    <!-- タイトル -->
+    <text x="250" y="40" font-family="Arial" font-size="20" fill="#fff" text-anchor="middle" font-weight="bold">国内エンジンRCコースの分布</text>
+    
+    <!-- 日本地図 - より詳細な輪郭 -->
+    <g filter="url(#mapGlow)">
+        <!-- 北海道 -->
+        <path d="M380,130 C400,120 410,130 400,150 C390,170 400,190 390,200 C380,210 360,200 350,190 C340,180 330,190 320,180 C310,170 320,150 330,140 C340,130 360,140 380,130 Z" 
+              stroke="#fff" stroke-width="2" fill="none" />
+              
+        <!-- 東北 -->
+        <path d="M320,180 C330,190 340,200 350,210 C360,220 370,240 360,260 C350,280 330,290 320,280 C310,270 300,290 290,280 C280,270 290,250 300,240 C310,230 320,220 310,200 C300,180 310,170 320,180 Z" 
+              stroke="#fff" stroke-width="2" fill="none" />
+              
+        <!-- 関東 -->
+        <path d="M290,280 C295,290 305,295 310,310 C315,325 310,340 300,350 C290,360 275,355 270,340 C265,325 255,320 260,310 C265,300 280,290 290,280 Z" 
+              stroke="#fff" stroke-width="2" fill="none" />
+              
+        <!-- 中部 -->
+        <path d="M270,340 C280,350 290,355 280,370 C270,385 250,390 240,380 C230,370 220,380 210,370 C200,360 210,340 220,330 C230,320 240,330 250,320 C260,310 260,330 270,340 Z" 
+              stroke="#fff" stroke-width="2" fill="none" />
+              
+        <!-- 関西 -->
+        <path d="M210,370 C220,380 225,390 215,400 C205,410 190,405 185,395 C180,385 170,390 165,380 C160,370 170,355 180,350 C190,345 200,355 210,370 Z" 
+              stroke="#fff" stroke-width="2" fill="none" />
+              
+        <!-- 中国・四国 -->
+        <path d="M165,380 C170,390 175,395 165,405 C155,415 140,410 135,400 C130,390 120,395 115,385 C110,375 120,360 130,355 C140,350 150,360 160,375 C165,375 165,380 165,380 Z" 
+              stroke="#fff" stroke-width="2" fill="none" />
+              
+        <path d="M165,405 C175,410 185,405 185,420 C185,435 170,440 160,430 C150,420 150,410 165,405 Z" 
+              stroke="#fff" stroke-width="2" fill="none" />
+              
+        <!-- 九州 -->
+        <path d="M115,385 C125,395 130,405 120,420 C110,435 95,430 90,415 C85,400 75,395 70,410 C65,425 50,420 60,400 C70,380 85,380 100,385 C115,385 115,385 115,385 Z" 
+              stroke="#fff" stroke-width="2" fill="none" />
+              
+        <!-- 沖縄（簡略化） -->
+        <path d="M30,500 C35,490 45,490 50,500 C55,510 45,520 35,515 C25,510 25,510 30,500 Z" 
+              stroke="#fff" stroke-width="2" fill="none" />
+    </g>
+    
+    <!-- 主要なRCコース位置 -->
+    <g>
+        <!-- タミヤ掛川サーキット（静岡県） -->
+        <g transform="translate(270, 340)">
+            <circle cx="0" cy="0" r="5" fill="url(#pointGradient)">
+                <animate attributeName="r" values="5;7;5" dur="2s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="1;0.6;1" dur="2s" repeatCount="indefinite" />
+            </circle>
+            <circle cx="0" cy="0" r="2" fill="#fff" />
+        </g>
+        <text x="290" y="340" font-family="Arial" font-size="10" fill="#fff">タミヤ掛川サーキット</text>
+        <line x1="270" y1="340" x2="320" y2="330" stroke="#f22" stroke-width="1" stroke-dasharray="2,1" />
+        
+        <!-- モロテックスピードウェイ（新潟県） -->
+        <g transform="translate(310, 260)">
+            <circle cx="0" cy="0" r="5" fill="url(#pointGradient)">
+                <animate attributeName="r" values="5;7;5" dur="3s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="1;0.6;1" dur="3s" repeatCount="indefinite" />
+            </circle>
+            <circle cx="0" cy="0" r="2" fill="#fff" />
+        </g>
+        <text x="330" y="260" font-family="Arial" font-size="10" fill="#fff">モロテックスピードウェイ</text>
+        <line x1="310" y1="260" x2="360" y2="250" stroke="#f22" stroke-width="1" stroke-dasharray="2,1" />
+        
+        <!-- RCスタジアム袖ケ浦（千葉県） -->
+        <g transform="translate(295, 310)">
+            <circle cx="0" cy="0" r="5" fill="url(#pointGradient)">
+                <animate attributeName="r" values="5;8;5" dur="1.5s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="1;0.5;1" dur="1.5s" repeatCount="indefinite" />
+            </circle>
+            <circle cx="0" cy="0" r="2" fill="#fff" />
+        </g>
+        <text x="315" y="310" font-family="Arial" font-size="10" fill="#fff">RCスタジアム袖ケ浦</text>
+        <line x1="295" y1="310" x2="340" y2="300" stroke="#f22" stroke-width="1" stroke-dasharray="2,1" />
+        
+        <!-- イルカサーキット（北海道） -->
+        <g transform="translate(380, 170)">
+            <circle cx="0" cy="0" r="5" fill="url(#pointGradient)">
+                <animate attributeName="r" values="5;7;5" dur="2.5s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="1;0.6;1" dur="2.5s" repeatCount="indefinite" />
+            </circle>
+            <circle cx="0" cy="0" r="2" fill="#fff" />
+        </g>
+        <text x="390" y="160" font-family="Arial" font-size="10" fill="#fff">イルカサーキット</text>
+        <line x1="380" y1="170" x2="390" y2="150" stroke="#f22" stroke-width="1" stroke-dasharray="2,1" />
+        
+        <!-- グリーンランド レインボードーム（熊本県） -->
+        <g transform="translate(100, 410)">
+            <circle cx="0" cy="0" r="5" fill="url(#pointGradient)">
+                <animate attributeName="r" values="5;7;5" dur="2.2s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="1;0.6;1" dur="2.2s" repeatCount="indefinite" />
+            </circle>
+            <circle cx="0" cy="0" r="2" fill="#fff" />
+        </g>
+        <text x="110" y="420" font-family="Arial" font-size="10" fill="#fff">グリーンランド レインボードーム</text>
+        <line x1="100" y1="410" x2="170" y2="430" stroke="#f22" stroke-width="1" stroke-dasharray="2,1" />
+    </g>
+    
+    <!-- 凡例 -->
+    <g transform="translate(50, 500)">
+        <rect width="160" height="75" fill="rgba(0,0,0,0.5)" stroke="#333" stroke-width="1" rx="5" ry="5" />
+        <text x="80" y="20" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">主要エンジンRCコース</text>
+        
+        <circle cx="20" cy="40" r="5" fill="#f22" />
+        <text x="30" y="43" font-family="Arial" font-size="10" fill="#fff">エンジンRCコース</text>
+        
+        <line x1="15" y1="60" x2="25" y2="60" stroke="#fff" stroke-width="2" />
+        <text x="35" y="63" font-family="Arial" font-size="10" fill="#fff">都道府県境界</text>
+    </g>
+    
+    <!-- スケール -->
+    <g transform="translate(360, 500)">
+        <line x1="0" y1="0" x2="100" y2="0" stroke="#fff" stroke-width="1" />
+        <line x1="0" y1="-5" x2="0" y2="5" stroke="#fff" stroke-width="1" />
+        <line x1="100" y1="-5" x2="100" y2="5" stroke="#fff" stroke-width="1" />
+        <text x="50" y="20" font-family="Arial" font-size="10" fill="#fff" text-anchor="middle">約200km</text>
+    </g>
+    
+    <!-- 方位記号 -->
+    <g transform="translate(450, 450)">
+        <circle cx="0" cy="0" r="20" fill="none" stroke="#fff" stroke-width="1" />
+        <line x1="0" y1="-20" x2="0" y2="20" stroke="#fff" stroke-width="1" />
+        <line x1="-20" y1="0" x2="20" y2="0" stroke="#fff" stroke-width="1" />
+        <text x="0" y="-25" font-family="Arial" font-size="10" fill="#fff" text-anchor="middle">N</text>
+        <text x="0" y="35" font-family="Arial" font-size="10" fill="#fff" text-anchor="middle">S</text>
+        <text x="-25" y="5" font-family="Arial" font-size="10" fill="#fff" text-anchor="middle">W</text>
+        <text x="25" y="5" font-family="Arial" font-size="10" fill="#fff" text-anchor="middle">E</text>
+    </g>
+    
+    <!-- 提案地点強調 -->
+    <g transform="translate(295, 310)">
+        <circle cx="0" cy="0" r="10" fill="none" stroke="#f22" stroke-width="1.5" stroke-dasharray="3,3">
+            <animate attributeName="r" values="10;15;10" dur="4s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="1;0.3;1" dur="4s" repeatCount="indefinite" />
+        </circle>
+    </g>
+</svg> 
